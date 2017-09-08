@@ -1,0 +1,14 @@
+sudo: false
+
+language: php
+
+php:
+    - 7.0
+    - 7.1
+
+before_script:
+    - travis_retry composer self-update
+
+script:
+    - composer phpunit_log_assertions:test
+    - vendor/bin/test-reporter --coverage-report=coverage.xml

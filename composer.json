@@ -1,0 +1,35 @@
+{
+  "name": "phoenixrvd/phpunit_log_assertions",
+  "description": "PHPUnit assertions for Monolog-TestHandler",
+  "type": "library",
+  "require": {
+    "phpunit/phpunit": "^6.3",
+    "monolog/monolog": "^1.23"
+  },
+  "license": "mit",
+  "autoload": {
+    "psr-4": {
+      "PhoenixRVD\\PHPUnitLogAssertions\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PhoenixRVD\\PHPUnitLogAssertions\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Viacheslav Wolf",
+      "email": "phoenixrvd@yahoo.de"
+    }
+  ],
+  "scripts": {
+    "phpunit_log_assertions:test": [
+      "@composer install",
+      "@php vendor/bin/phpunit --configuration phpunit.xml"
+    ],
+    "phpunit_log_assertions:toc": [
+      "doctoc README.md --notitle"
+    ]
+  }
+}
