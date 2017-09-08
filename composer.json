@@ -1,5 +1,5 @@
 {
-  "name": "phoenixrvd/phpunit_log_assertions",
+  "name": "phoenixrvd/phpunit-assert-log-entry",
   "description": "PHPUnit assertions for Monolog-TestHandler",
   "type": "library",
   "require": {
