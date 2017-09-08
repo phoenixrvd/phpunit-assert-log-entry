@@ -8,7 +8,7 @@
 
 [![Build Status](https://travis-ci.org/phoenixrvd/phpunit-assert-log-entry.png?branch=master)](https://travis-ci.org/phoenixrvd/phpunit-assert-log-entry)
 [![Code Climate](https://codeclimate.com/github/phoenixrvd/phpunit-assert-log-entry.png)](https://codeclimate.com/github/phoenixrvd/phpunit-assert-log-entry)
-[![StyleCI](https://styleci.io/repos/87853601/shield?branch=master)](https://styleci.io/repos/87853601)
+[![StyleCI](https://styleci.io/repos/102899359/shield?branch=master)](https://styleci.io/repos/102899359)
 [![Test Coverage](https://codeclimate.com/github/phoenixrvd/phpunit-assert-log-entry/badges/coverage.svg)](https://codeclimate.com/github/phoenixrvd/phpunit-assert-log-entry/coverage)
 [![Latest Unstable Version](https://poser.pugx.org/phoenixrvd/phpunit-assert-log-entry/v/unstable.svg)](https://packagist.org/packages/phoenixrvd/phpunit-assert-log-entry)
 
