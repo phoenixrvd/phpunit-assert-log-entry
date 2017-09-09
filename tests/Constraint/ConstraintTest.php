@@ -2,12 +2,18 @@
 
 namespace PhoenixRVD\PHPUnitLogAssertions\Constraint;
 
+use Monolog\Logger;
+use PhoenixRVD\PHPUnitLogAssertions\LogAssertions;
 use PHPUnit\Framework\TestCase;
 
 class ConstraintTest extends TestCase {
 
+    use LogAssertions;
+
     public function testToString(){
         $logLevel = "Alert";
+
+        self::attachLogger(new Logger(__CLASS__));
         
         self::assertToString(Contains::class, $logLevel, "- $logLevel string has no matched entries in log");
         self::assertToString(HasMatches::class, $logLevel, "- $logLevel pattern has no matched entries in log");
@@ -21,7 +27,8 @@ class ConstraintTest extends TestCase {
 
     public static function assertToString($class, $logLevel, $expected){
         /** @var Constraint $obj */
-        $obj = new $class("has$logLevel");
+        $factoryMethod = str_replace(__NAMESPACE__ . '\\', '', $class);
+        $obj = self::LogConstraintFactory()->$factoryMethod("has$logLevel");
         self::assertEquals($expected, $obj->toString());
     }
 
