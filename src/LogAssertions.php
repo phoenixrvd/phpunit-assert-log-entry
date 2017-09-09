@@ -7,9 +7,9 @@ use PhoenixRVD\PHPUnitLogAssertions\Constraint\Factory;
 
 trait LogAssertions
 {
-
-    public static function LogConstraintFactory(){
-        return new Factory;
+    public static function LogConstraintFactory()
+    {
+        return new Factory();
     }
 
     public static function attachLogger(Logger $logger)
@@ -217,7 +217,6 @@ trait LogAssertions
         static::assertThat($expected, static::LogConstraintFactory()->HasPasses(__FUNCTION__), $message);
     }
 
-
     public static function assertLogHasNoEmergency($record, $message = '')
     {
         static::assertThat($record, static::LogConstraintFactory()->HasNoPasses(__FUNCTION__), $message);
@@ -417,5 +416,4 @@ trait LogAssertions
     {
         static::assertThat($expected, static::LogConstraintFactory()->HasNoPasses(__FUNCTION__), $message);
     }
-
 }

@@ -15,8 +15,8 @@ use Monolog\Logger;
  * @method HasRecords HasRecords(string $methodName)
  * @method NotContains NotContains(string $methodName)
  */
-class Factory {
-
+class Factory
+{
     /**
      * @var TestHandler
      */
@@ -27,8 +27,8 @@ class Factory {
      *
      * @return TestHandler
      */
-    public function attachLogHandler(Logger $logger) {
-
+    public function attachLogHandler(Logger $logger)
+    {
         foreach ($logger->getHandlers() as $handler) {
             if ($handler instanceof TestHandler) {
                 self::$logHandler = $handler;
@@ -46,8 +46,9 @@ class Factory {
         return self::$logHandler;
     }
 
-    public function __call($method, $args) {
-        $classname = __NAMESPACE__ . '\\' . $method;
+    public function __call($method, $args)
+    {
+        $classname = __NAMESPACE__.'\\'.$method;
 
         $methodName = lcfirst(str_replace(['assertLogHasNo', 'assertLogHas'], 'has', $args[0]));
         $methodName = str_replace('hastice', 'hasNotice', $methodName);
