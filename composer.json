@@ -3,7 +3,7 @@
   "description": "PHPUnit assertions for Monolog-TestHandler",
   "type": "library",
   "require": {
-    "phpunit/phpunit": "^6.3",
+    "phpunit/phpunit": "~5.6||^6.3",
     "monolog/monolog": "^1.23"
   },
   "require-dev": {
