@@ -4,3 +4,4 @@
 composer.phar
 /vendor/
 coverage.xml
+composer.lock
